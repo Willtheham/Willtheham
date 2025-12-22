@@ -1,46 +1,30 @@
-name: Waka Box Auto Update
+name: Update WakaTime Gist
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '0 0 * * *'  # daily at midnight UTC
+    - cron: '0 0 * * *'
+  push:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  update-waka-box:
+  update-gist:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout repository
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      # Step 2: Debug: Check WAKATIME_API_KEY exists
-      - name: Check WAKATIME_API_KEY secret
-        run: |
-          if [ -z "$WAKATIME_API_KEY" ]; then
-            echo "WAKATIME_API_KEY is not set! Exiting."
-            exit 1
-          else
-            echo "WAKATIME_API_KEY found."
-          fi
-        env:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-
-      # Step 3: Run Waka Box
-      - name: Generate Waka Box
+      - name: Run waka-box
         uses: matchai/waka-box@v5.0.0
-        with:
-          waka_api_key: ${{ secrets.WAKATIME_API_KEY }}
-          output: 'waka-box.svg'
-          theme: 'default'
-          time_range: 'last_30_days'
+        env:
+          # WakaTime API key (Required)
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          # GitHub token (Required)
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          # Your gist ID (Required)
+          GIST_ID: ${{ secrets.GIST_ID }}
+          # OPTIONAL: timezone, e.g. "America/New_York"
+          TIMEZONE: ${{ secrets.TIMEZONE }}
 
-      # Step 4: Commit & push changes
-      - name: Commit & Push Waka Box
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update Waka Box"
-          file_pattern: 'waka-box.svg'
-          branch: main
+      - name: Commit updated gist (if needed)
+        run: echo "Gist updated"
