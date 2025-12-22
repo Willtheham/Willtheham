@@ -15,17 +15,11 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run waka-box with debug
-        uses: matchai/waka-box@v5.0.0
-        with:
-          args: --debug
+        run: npx waka-box --debug
         env:
-          # WakaTime API key (Required)
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          # GitHub token with gist permissions (Required)
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          # Your gist ID (Required)
           GIST_ID: ${{ secrets.GIST_ID }}
-          # OPTIONAL: timezone, e.g. "America/New_York"
           TIMEZONE: ${{ secrets.TIMEZONE }}
 
       - name: Commit updated gist (if needed)
