@@ -1,13 +1,13 @@
-## Hi there 👋
+## Hi there 👋 I am Will! A coder, DJ, and LD.
 
 ### 🌐 My Websites
 
 [![Website](https://img.shields.io/badge/Website-willtheham.xyz-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://willtheham.xyz)
 [![Documentation](https://img.shields.io/badge/Docs-docs.willtheham.xyz-green?style=for-the-badge&logo=read-the-docs&logoColor=white)](https://docs.willtheham.xyz)
 
-### 📊 GitHub Contributions (3D)
+### GitHub Streak 
 
-![3D Contribution Chart](https://raw.githubusercontent.com/Willtheham/Willtheham/main/profile-3d-contrib/profile-night-rainbow.svg)
+[![GitHub Streak](https://streak-stats.demolab.com?user=Willtheham&theme=tokyonight-duo&hide_border=true)](https://git.io/streak-stats)
 
 <!--
 **Willtheham/Willtheham** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
