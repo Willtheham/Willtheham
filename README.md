@@ -11,7 +11,7 @@
 
 [![GitHub Streak](https://github-readme-streak-stats-rho-amber.vercel.app?user=Willtheham&theme=tokyonight-duo&mode=weekly)](https://git.io/streak-stats)
 
-
+[![Wakatime Stats](https://gist.github.com/Willtheham/80ff476790e1cdbd07dc3204254cf30b)](https://gist.github.com/Willtheham/80ff476790e1cdbd07dc3204254cf30b)
 ---
 
 <!--
