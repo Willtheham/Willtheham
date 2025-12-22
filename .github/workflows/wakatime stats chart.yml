@@ -1,0 +1,2 @@
+- name: WakaTime Stats Charts Generator
+  uses: dvjn/wakatime-charts@v0.3.1
