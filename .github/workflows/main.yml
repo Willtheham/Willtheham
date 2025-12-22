@@ -12,17 +12,32 @@ jobs:
   update-waka-box:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Step 2: Debug: Check WAKATIME_API_KEY exists
+      - name: Check WAKATIME_API_KEY secret
+        run: |
+          if [ -z "$WAKATIME_API_KEY" ]; then
+            echo "WAKATIME_API_KEY is not set! Exiting."
+            exit 1
+          else
+            echo "WAKATIME_API_KEY found."
+          fi
+        env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+
+      # Step 3: Run Waka Box
       - name: Generate Waka Box
         uses: matchai/waka-box@v5.0.0
         with:
-          waka_api_key: ${{ secrets.WAKA_API_KEY }}
+          waka_api_key: ${{ secrets.WAKATIME_API_KEY }}
           output: 'waka-box.svg'
           theme: 'default'
-          time_range: 'last_30_days'  # <-- changed here
+          time_range: 'last_30_days'
 
+      # Step 4: Commit & push changes
       - name: Commit & Push Waka Box
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
