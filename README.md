@@ -9,7 +9,7 @@
 
 ### Stats
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Willtheham&theme=synthwave)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=Willtheham&theme=synthwave)]
 <!--
 **Willtheham/Willtheham** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
