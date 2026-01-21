@@ -9,9 +9,7 @@
 
 ### Stats
 
-[![GitHub Streak](https://github-readme-streak-stats-rho-amber.vercel.app?user=Willtheham&theme=tokyonight-duo&mode=weekly)](https://git.io/streak-stats)
-
-<script src="https://gist.github.com/Willtheham/80ff476790e1cdbd07dc3204254cf30b.js"></script>
+[![GitHub Streak](https://streak-stats.demolab.com?user=Willtheham&theme=synthwave)](https://git.io/streak-stats)
 <!--
 **Willtheham/Willtheham** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
